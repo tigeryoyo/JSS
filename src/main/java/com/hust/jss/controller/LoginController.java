@@ -112,8 +112,9 @@ public class LoginController {
 	
 	@RequestMapping("logout")
 	public String logout(HttpServletRequest request){
-		request.getSession().removeAttribute("name");
-		//若去除id login界面就帐号栏就没有当前用户帐号
+		request.getSession().removeAttribute("stuName");
+		request.getSession().removeAttribute("teaName");
+		//鑻ュ幓闄d login鐣岄潰灏卞笎鍙锋爮灏辨病鏈夊綋鍓嶇敤鎴峰笎鍙�
 	//	request.getSession().removeAttribute("id");
 		return "redirect:/";
 	}
